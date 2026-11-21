@@ -1,12 +1,49 @@
 # NyumbaLink starter
+NyumbaLink 🏡
 
-Open the folder in VS Code, install the **Live Server** extension, then right-click `index.html` and choose **Open with Live Server**.
+NyumbaLink is a platform designed to connect people with houses and rental properties, making it easier to find suitable accommodation.
 
-```
-nyumbalink/
-  index.html     page structure (all sections)
-  css/styles.css shared colours, fonts and layout
-  js/app.js      search, listings, reviews, community feed, profile
-```
+About the Project
 
-Data is stored in the browser with localStorage, so no backend is needed to run it.
+NyumbaLink aims to simplify the house-hunting process by providing a convenient way for users to explore available rental properties and connect with property owners.
+
+Features
+
+- Browse available houses and rental properties.
+- View property details.
+- Connect tenants with property owners.
+- Simple and user-friendly interface.
+- Responsive design.
+
+Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Git and GitHub
+
+Getting Started
+
+1. Clone the repository:
+   
+   git clone YOUR_GITHUB_REPOSITORY_URL
+
+2. Open the project folder.
+
+3. Open "index.html" in your browser.
+
+Project Goals
+
+To make finding rental accommodation easier, faster, and more accessible by connecting tenants and property owners through one platform.
+
+Author
+
+Josphine Moraa
+
+Contact
+
+Phone: 0758067373
+
+License
+
+This project is created for learning and development purposes.
