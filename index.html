@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NyumbaLink: Find a home. Connect. Share. Belong.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION (Moraa) ===== -->
+  <header class="site-header">
+    <a class="logo" href="#home">Nyumba<span>Link</span></a>
+    <nav aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#listings">Find a house</a>
+      <a href="#community">Community</a>
+      <a href="#profile">My profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HOME (Moraa) ===== -->
+    <section id="home" class="page" hidden>
+      <div class="hero">
+        <h1>Find a home. Connect. Share. Belong.</h1>
+        <p class="lead">NyumbaLink connects house hunters, landlords, agents and residents, so you can choose a home with advice from people who already know the area.</p>
+        <div class="actions">
+          <a class="btn" href="#listings">Find a house</a>
+          <a class="btn btn-soft" href="#community">Join the community</a>
+        </div>
+      </div>
+      <div class="grid three">
+        <article class="card"><h3>Post a vacant house</h3><p>Landlords, agents and neighbours can list a house with rent, photos and amenities.</p></article>
+        <article class="card"><h3>Search what you can afford</h3><p>Filter by rent, bedrooms and sort by the lowest rent or newest listing.</p></article>
+        <article class="card"><h3>Hear from residents</h3><p>Read ratings on water, security and condition, then ask questions in the community feed.</p></article>
+      </div>
+      <section class="about" id="about">
+        <h2>About NyumbaLink</h2>
+        <p>House hunting is stressful when you can't trust what you see online. NyumbaLink puts shared experience first, so more people can find suitable and affordable homes.</p>
+      </section>
+    </section>
+
+    <!-- ===== LISTINGS: SEARCH + POST FORM (Carlos, Stacy) ===== -->
+    <section id="listings" class="page" hidden>
+      <h2>Find a house</h2>
+      <form id="filters" class="filters" aria-label="Search and filter">
+        <label>Search<input type="search" id="f-q" placeholder="Title or location"></label>
+        <label>Max rent (KES)<input type="number" id="f-rent" min="0" step="500" placeholder="e.g. 15000"></label>
+        <label>Bedrooms
+          <select id="f-beds"><option value="">Any</option><option value="0">Bedsitter</option><option value="1">1</option><option value="2">2</option><option value="3">3+</option></select>
+        </label>
+        <label>Sort by
+          <select id="f-sort"><option value="new">Newest</option><option value="low">Lowest rent</option><option value="high">Highest rent</option></select>
+        </label>
+      </form>
+
+      <details class="post-house">
+        <summary>Post a vacant house</summary>
+        <form id="listing-form" class="stack-form">
+          <label>Title<input name="title" required maxlength="80" placeholder="Sunny 2 bedroom in Kasarani"></label>
+          <label>Location<input name="location" required placeholder="Neighbourhood, town"></label>
+          <label>Rent per month (KES)<input name="rent" type="number" min="0" required></label>
+          <label>Bedrooms<select name="beds"><option value="0">Bedsitter</option><option value="1">1</option><option value="2" selected>2</option><option value="3">3+</option></select></label>
+          <label>Amenities (separate with commas)<input name="amenities" placeholder="Water, Parking, WiFi"></label>
+          <label>Contact (phone or email)<input name="contact" required></label>
+          <label>Description<textarea name="description" rows="3" required></textarea></label>
+          <label>Photo<input name="image" type="file" accept="image/*"></label>
+          <button class="btn" type="submit">Publish listing</button>
+        </form>
+      </details>
+
+      <div id="listing-grid" class="grid three"></div>
+      <p id="no-results" class="empty" hidden>No houses match. Try a higher rent or clear the filters.</p>
+    </section>
+
+    <!-- ===== COMMUNITY FEED (Belinda) ===== -->
+    <section id="community" class="page" hidden>
+      <h2>Community</h2>
+      <form id="post-form" class="stack-form">
+        <label>Post type
+          <select name="type"><option>Experience</option><option>Question</option><option>Available property</option></select>
+        </label>
+        <label>What would you like to share?<textarea name="text" rows="3" required placeholder="Ask about a neighbourhood or share your experience"></textarea></label>
+        <button class="btn" type="submit">Publish post</button>
+      </form>
+      <div id="feed"></div>
+    </section>
+
+    <!-- ===== PROFILE (Kevin) ===== -->
+    <section id="profile" class="page" hidden>
+      <h2>My profile</h2>
+      <div id="profile-body"></div>
+    </section>
+  </main>
+
+  <!-- ===== PROPERTY DETAILS + REVIEWS (Antony, Stephen) ===== -->
+  <dialog id="detail" aria-label="Property details">
+    <button class="close" data-action="close-detail" aria-label="Close">×</button>
+    <div id="detail-body"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>NyumbaLink · Find a home. Connect. Share. Belong.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
